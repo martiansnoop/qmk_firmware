@@ -42,6 +42,10 @@ enum planck_keycodes {
 #define SHIFT_ENTER MT(MOD_RSFT, KC_ENT)
 #define NAV_TAB LT(_NAV, KC_TAB)
 
+// tab navigation
+#define CTL_TAB LCTL(KC_TAB)
+#define CSF_TAB LSFT(LCTL(KC_TAB))
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty
@@ -66,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  | Bksp |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Nav  |      |      |      |      |      |      |   _  |   +  |   {  |   }  |  |   |
+ * | Nav  |      |      | cstab| ctab |      |      |   _  |   +  |   {  |   }  |  |   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -75,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT_planck_grid(
     KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
-    NAV,     _______, _______, _______, _______ ,_______, _______, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
+    NAV,     _______, _______, CSF_TAB, CTL_TAB,_______, _______, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, KC_VOLD, KC_VOLU, KC_MUTE
 ),
