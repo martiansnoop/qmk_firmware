@@ -26,7 +26,6 @@ enum planck_layers {
   _LOWER,
   _RAISE,
   _NAV,
-  _MOUSE,
   _FKEYS,
   _PLOVER,
   _ADJUST
@@ -41,7 +40,6 @@ enum planck_keycodes {
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
 #define NAV   MO(_NAV)
-#define MOUSE MO(_MOUSE)
 #define FKEYS MO(_FKEYS)
 #define SHIFT_ENTER MT(MOD_RSFT, KC_ENT)
 #define NAV_TAB LT(_NAV, KC_TAB)
@@ -67,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  KC_Q,    KC_W,   KC_E,  KC_R,    KC_T,   KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     NAV_TAB, KC_A,    KC_S,   KC_D,  KC_F,    KC_G,   KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
     KC_LSFT, KC_Z,    KC_X,   KC_C,  KC_V,    KC_B,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, SHIFT_ENTER ,
-    KC_LCTL, KC_LALT, KC_LGUI,MOUSE, LOWER,   KC_SPC, KC_SPC,  RAISE,   NAV,     KC_DOWN, KC_UP  , FKEYS 
+    KC_LCTL, KC_LALT, KC_LGUI,NAV,   LOWER,   KC_SPC, KC_SPC,  RAISE,   NAV,     KC_DOWN, KC_UP  , FKEYS 
 ),
 
 /* Lower
@@ -112,17 +110,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, KC_BTN2, KC_MS_U, KC_BTN1, KC_WH_U, _______, KC_PGUP, KC_UP  , KC_PGDN,  _______, KC_DEL ,
     _______, _______, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT, _______, _______,
     _______, _______, _______, _______, _______, _______, KC_END , _______, _______, _______ , _______, _______,
-    _______, _______, _______, _______, _______, KC_BTN1, KC_BTN1, _______, _______, _______ , _______, _______
-),
-
-/* Mouse
- */
-[_MOUSE] = LAYOUT_planck_grid(
-    _______, _______, _______, _______, _______, _______, _______, KC_BTN1, KC_MS_U, KC_BTN2, _______, _______,
-    _______, _______, _______, _______, _______, _______, _______, KC_MS_L, KC_MS_D, KC_MS_R , _______, _______,
-    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ , _______, _______,
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ , _______, _______
-   ),
+),
 
 /* Function keys 
  */
