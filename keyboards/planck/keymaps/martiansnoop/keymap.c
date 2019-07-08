@@ -159,7 +159,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_WAKE, RESET,   DEBUG,   _______, _______, MU_TOG , AU_TOG , _______, _______, _______, _______,  QWERTY,
     KC_SLEP, _______, MU_MOD,  _______, _______, AG_NORM, AG_SWAP, _______, _______, RGB_HUD, RGB_HUI,  PLOVER,
     _______, MUV_DE,  MUV_IN,  _______, _______, _______, _______, _______, _______, RGB_SAD, RGB_SAI, _______,
-    _______, _______, _______, _______, _______, _______, _______, _______, RGB_MOD, RGB_VAD, RGB_VAI, RGB_TOG 
+    _______, _______, _______, _______, _______, _______, _______, _______, RGB_MOD, RGB_VAD, RGB_VAI, RGB_TOG
 )
 
 
